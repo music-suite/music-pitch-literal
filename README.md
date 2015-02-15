@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/diagrams/monoid-extras.png?branch=master)](https://travis-ci.org/diagrams/monoid-extras)
+[![Build Status](https://travis-ci.org/music-suite/music-pitch-literal.png?branch=master)](https://travis-ci.org/music-suite/music-pitch-literal)
 
 # music-pitch-literal
 

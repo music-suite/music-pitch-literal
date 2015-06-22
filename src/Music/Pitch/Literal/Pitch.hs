@@ -23,6 +23,16 @@ module Music.Pitch.Literal.Pitch (
         
         -- * Literal values
         
+        -- ** Four octaves up
+        cs'''', ds'''', es'''', fs'''', gs'''', as'''', bs'''',
+        c'''' , d'''' , e'''' , f'''' , g'''' , a'''' , b'''' ,
+        cb'''', db'''', eb'''', fb'''', gb'''', ab'''', bb'''',
+
+        -- ** Three octaves up
+        cs''', ds''', es''', fs''', gs''', as''', bs''',
+        c''' , d''' , e''' , f''' , g''' , a''' , b''' ,
+        cb''', db''', eb''', fb''', gb''', ab''', bb''',
+
         -- ** Two octaves up
         cs'', ds'', es'', fs'', gs'', as'', bs'',
         c'' , d'' , e'' , f'' , g'' , a'' , b'' ,
@@ -46,7 +56,12 @@ module Music.Pitch.Literal.Pitch (
         -- ** Two octaves down
         cs__, ds__, es__, fs__, gs__, as__, bs__,
         c__ , d__ , e__ , f__ , g__ , a__ , b__ ,
-        cb__, db__, eb__, fb__, gb__, ab__, bb__
+        cb__, db__, eb__, fb__, gb__, ab__, bb__,
+
+        -- ** Three octaves down
+        cs___, ds___, es___, fs___, gs___, as___, bs___,
+        c___ , d___ , e___ , f___ , g___ , a___ , b___ ,
+        cb___, db___, eb___, fb___, gb___, ab___, bb___,
 
   ) where
 
@@ -253,4 +268,82 @@ fb__ = fromPitch $ PitchL (3, Just (-1), -2)
 gb__ = fromPitch $ PitchL (4, Just (-1), -2)
 ab__ = fromPitch $ PitchL (5, Just (-1), -2)
 bb__ = fromPitch $ PitchL (6, Just (-1), -2)
+
+
+----
+b''' = octavesUp 1 b''
+a''' = octavesUp 1 a''
+g''' = octavesUp 1 g''
+f''' = octavesUp 1 f''
+e''' = octavesUp 1 e''
+d''' = octavesUp 1 d''
+c''' = octavesUp 1 c''
+
+bs''' = octavesUp 1 bs''
+as''' = octavesUp 1 as''
+gs''' = octavesUp 1 gs''
+fs''' = octavesUp 1 fs''
+es''' = octavesUp 1 es''
+ds''' = octavesUp 1 ds''
+cs''' = octavesUp 1 cs''
+
+bb''' = octavesUp 1 bb''
+ab''' = octavesUp 1 ab''
+gb''' = octavesUp 1 gb''
+fb''' = octavesUp 1 fb''
+eb''' = octavesUp 1 eb''
+db''' = octavesUp 1 db''
+cb''' = octavesUp 1 cb''
+
+b'''' = octavesUp 1 b'''
+a'''' = octavesUp 1 a'''
+g'''' = octavesUp 1 g'''
+f'''' = octavesUp 1 f'''
+e'''' = octavesUp 1 e'''
+d'''' = octavesUp 1 d'''
+c'''' = octavesUp 1 c'''
+
+bs'''' = octavesUp 1 bs'''
+as'''' = octavesUp 1 as'''
+gs'''' = octavesUp 1 gs'''
+fs'''' = octavesUp 1 fs'''
+es'''' = octavesUp 1 es'''
+ds'''' = octavesUp 1 ds'''
+cs'''' = octavesUp 1 cs'''
+
+bb'''' = octavesUp 1 bb'''
+ab'''' = octavesUp 1 ab'''
+gb'''' = octavesUp 1 gb'''
+fb'''' = octavesUp 1 fb'''
+eb'''' = octavesUp 1 eb'''
+db'''' = octavesUp 1 db'''
+cb'''' = octavesUp 1 cb'''
+
+
+
+
+b___ = octavesDown 1 b__
+a___ = octavesDown 1 a__
+g___ = octavesDown 1 g__
+f___ = octavesDown 1 f__
+e___ = octavesDown 1 e__
+d___ = octavesDown 1 d__
+c___ = octavesDown 1 c__
+
+bs___ = octavesDown 1 bs__
+as___ = octavesDown 1 as__
+gs___ = octavesDown 1 gs__
+fs___ = octavesDown 1 fs__
+es___ = octavesDown 1 es__
+ds___ = octavesDown 1 ds__
+cs___ = octavesDown 1 cs__
+
+bb___ = octavesDown 1 bb__
+ab___ = octavesDown 1 ab__
+gb___ = octavesDown 1 gb__
+fb___ = octavesDown 1 fb__
+eb___ = octavesDown 1 eb__
+db___ = octavesDown 1 db__
+cb___ = octavesDown 1 cb__
+
 

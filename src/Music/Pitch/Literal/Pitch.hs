@@ -63,6 +63,11 @@ module Music.Pitch.Literal.Pitch (
         c___ , d___ , e___ , f___ , g___ , a___ , b___ ,
         cb___, db___, eb___, fb___, gb___, ab___, bb___,
 
+        -- ** Four octaves down
+        cs____, ds____, es____, fs____, gs____, as____, bs____,
+        c____ , d____ , e____ , f____ , g____ , a____ , b____ ,
+        cb____, db____, eb____, fb____, gb____, ab____, bb____,
+
   ) where
 
 import           Control.Applicative
@@ -149,201 +154,222 @@ instance IsPitch Integer where
                 5 -> 9
                 6 -> 11
 
-cs'' = fromPitch $ PitchL (0, Just 1, 2)
-ds'' = fromPitch $ PitchL (1, Just 1, 2)
-es'' = fromPitch $ PitchL (2, Just 1, 2)
-fs'' = fromPitch $ PitchL (3, Just 1, 2)
-gs'' = fromPitch $ PitchL (4, Just 1, 2)
-as'' = fromPitch $ PitchL (5, Just 1, 2)
-bs'' = fromPitch $ PitchL (6, Just 1, 2)
+cs''''    = fromPitch $ PitchL (0, Just 1, 4)
+ds''''    = fromPitch $ PitchL (1, Just 1, 4)
+es''''    = fromPitch $ PitchL (2, Just 1, 4)
+fs''''    = fromPitch $ PitchL (3, Just 1, 4)
+gs''''    = fromPitch $ PitchL (4, Just 1, 4)
+as''''    = fromPitch $ PitchL (5, Just 1, 4)
+bs''''    = fromPitch $ PitchL (6, Just 1, 4)
+          
+c''''     = fromPitch $ PitchL (0, Nothing, 4)
+d''''     = fromPitch $ PitchL (1, Nothing, 4)
+e''''     = fromPitch $ PitchL (2, Nothing, 4)
+f''''     = fromPitch $ PitchL (3, Nothing, 4)
+g''''     = fromPitch $ PitchL (4, Nothing, 4)
+a''''     = fromPitch $ PitchL (5, Nothing, 4)
+b''''     = fromPitch $ PitchL (6, Nothing, 4)
+          
+cb''''    = fromPitch $ PitchL (0, Just (-1), 4)
+db''''    = fromPitch $ PitchL (1, Just (-1), 4)
+eb''''    = fromPitch $ PitchL (2, Just (-1), 4)
+fb''''    = fromPitch $ PitchL (3, Just (-1), 4)
+gb''''    = fromPitch $ PitchL (4, Just (-1), 4)
+ab''''    = fromPitch $ PitchL (5, Just (-1), 4)
+bb''''    = fromPitch $ PitchL (6, Just (-1), 4)
 
-c''  = fromPitch $ PitchL (0, Nothing, 2)
-d''  = fromPitch $ PitchL (1, Nothing, 2)
-e''  = fromPitch $ PitchL (2, Nothing, 2)
-f''  = fromPitch $ PitchL (3, Nothing, 2)
-g''  = fromPitch $ PitchL (4, Nothing, 2)
-a''  = fromPitch $ PitchL (5, Nothing, 2)
-b''  = fromPitch $ PitchL (6, Nothing, 2)
+cs'''     = fromPitch $ PitchL (0, Just 1, 3)
+ds'''     = fromPitch $ PitchL (1, Just 1, 3)
+es'''     = fromPitch $ PitchL (2, Just 1, 3)
+fs'''     = fromPitch $ PitchL (3, Just 1, 3)
+gs'''     = fromPitch $ PitchL (4, Just 1, 3)
+as'''     = fromPitch $ PitchL (5, Just 1, 3)
+bs'''     = fromPitch $ PitchL (6, Just 1, 3)
 
-cb'' = fromPitch $ PitchL (0, Just (-1), 2)
-db'' = fromPitch $ PitchL (1, Just (-1), 2)
-eb'' = fromPitch $ PitchL (2, Just (-1), 2)
-fb'' = fromPitch $ PitchL (3, Just (-1), 2)
-gb'' = fromPitch $ PitchL (4, Just (-1), 2)
-ab'' = fromPitch $ PitchL (5, Just (-1), 2)
-bb'' = fromPitch $ PitchL (6, Just (-1), 2)
+c'''      = fromPitch $ PitchL (0, Nothing, 3)
+d'''      = fromPitch $ PitchL (1, Nothing, 3)
+e'''      = fromPitch $ PitchL (2, Nothing, 3)
+f'''      = fromPitch $ PitchL (3, Nothing, 3)
+g'''      = fromPitch $ PitchL (4, Nothing, 3)
+a'''      = fromPitch $ PitchL (5, Nothing, 3)
+b'''      = fromPitch $ PitchL (6, Nothing, 3)
+          
+cb'''     = fromPitch $ PitchL (0, Just (-1), 3)
+db'''     = fromPitch $ PitchL (1, Just (-1), 3)
+eb'''     = fromPitch $ PitchL (2, Just (-1), 3)
+fb'''     = fromPitch $ PitchL (3, Just (-1), 3)
+gb'''     = fromPitch $ PitchL (4, Just (-1), 3)
+ab'''     = fromPitch $ PitchL (5, Just (-1), 3)
+bb'''     = fromPitch $ PitchL (6, Just (-1), 3)
+          
+cs''      = fromPitch $ PitchL (0, Just 1, 2)
+ds''      = fromPitch $ PitchL (1, Just 1, 2)
+es''      = fromPitch $ PitchL (2, Just 1, 2)
+fs''      = fromPitch $ PitchL (3, Just 1, 2)
+gs''      = fromPitch $ PitchL (4, Just 1, 2)
+as''      = fromPitch $ PitchL (5, Just 1, 2)
+bs''      = fromPitch $ PitchL (6, Just 1, 2)
 
-cs'  = fromPitch $ PitchL (0, Just 1, 1)
-ds'  = fromPitch $ PitchL (1, Just 1, 1)
-es'  = fromPitch $ PitchL (2, Just 1, 1)
-fs'  = fromPitch $ PitchL (3, Just 1, 1)
-gs'  = fromPitch $ PitchL (4, Just 1, 1)
-as'  = fromPitch $ PitchL (5, Just 1, 1)
-bs'  = fromPitch $ PitchL (6, Just 1, 1)
+c''       = fromPitch $ PitchL (0, Nothing, 2)
+d''       = fromPitch $ PitchL (1, Nothing, 2)
+e''       = fromPitch $ PitchL (2, Nothing, 2)
+f''       = fromPitch $ PitchL (3, Nothing, 2)
+g''       = fromPitch $ PitchL (4, Nothing, 2)
+a''       = fromPitch $ PitchL (5, Nothing, 2)
+b''       = fromPitch $ PitchL (6, Nothing, 2)
 
-c'   = fromPitch $ PitchL (0, Nothing, 1)
-d'   = fromPitch $ PitchL (1, Nothing, 1)
-e'   = fromPitch $ PitchL (2, Nothing, 1)
-f'   = fromPitch $ PitchL (3, Nothing, 1)
-g'   = fromPitch $ PitchL (4, Nothing, 1)
-a'   = fromPitch $ PitchL (5, Nothing, 1)
-b'   = fromPitch $ PitchL (6, Nothing, 1)
+cb''      = fromPitch $ PitchL (0, Just (-1), 2)
+db''      = fromPitch $ PitchL (1, Just (-1), 2)
+eb''      = fromPitch $ PitchL (2, Just (-1), 2)
+fb''      = fromPitch $ PitchL (3, Just (-1), 2)
+gb''      = fromPitch $ PitchL (4, Just (-1), 2)
+ab''      = fromPitch $ PitchL (5, Just (-1), 2)
+bb''      = fromPitch $ PitchL (6, Just (-1), 2)
 
-cb'  = fromPitch $ PitchL (0, Just (-1), 1)
-db'  = fromPitch $ PitchL (1, Just (-1), 1)
-eb'  = fromPitch $ PitchL (2, Just (-1), 1)
-fb'  = fromPitch $ PitchL (3, Just (-1), 1)
-gb'  = fromPitch $ PitchL (4, Just (-1), 1)
-ab'  = fromPitch $ PitchL (5, Just (-1), 1)
-bb'  = fromPitch $ PitchL (6, Just (-1), 1)
+cs'       = fromPitch $ PitchL (0, Just 1, 1)
+ds'       = fromPitch $ PitchL (1, Just 1, 1)
+es'       = fromPitch $ PitchL (2, Just 1, 1)
+fs'       = fromPitch $ PitchL (3, Just 1, 1)
+gs'       = fromPitch $ PitchL (4, Just 1, 1)
+as'       = fromPitch $ PitchL (5, Just 1, 1)
+bs'       = fromPitch $ PitchL (6, Just 1, 1)
 
-cs   = fromPitch $ PitchL (0, Just 1, 0)
-ds   = fromPitch $ PitchL (1, Just 1, 0)
-es   = fromPitch $ PitchL (2, Just 1, 0)
-fs   = fromPitch $ PitchL (3, Just 1, 0)
-gs   = fromPitch $ PitchL (4, Just 1, 0)
-as   = fromPitch $ PitchL (5, Just 1, 0)
-bs   = fromPitch $ PitchL (6, Just 1, 0)
+c'        = fromPitch $ PitchL (0, Nothing, 1)
+d'        = fromPitch $ PitchL (1, Nothing, 1)
+e'        = fromPitch $ PitchL (2, Nothing, 1)
+f'        = fromPitch $ PitchL (3, Nothing, 1)
+g'        = fromPitch $ PitchL (4, Nothing, 1)
+a'        = fromPitch $ PitchL (5, Nothing, 1)
+b'        = fromPitch $ PitchL (6, Nothing, 1)
 
-c    = fromPitch $ PitchL (0, Nothing, 0)
-d    = fromPitch $ PitchL (1, Nothing, 0)
-e    = fromPitch $ PitchL (2, Nothing, 0)
-f    = fromPitch $ PitchL (3, Nothing, 0)
-g    = fromPitch $ PitchL (4, Nothing, 0)
-a    = fromPitch $ PitchL (5, Nothing, 0)
-b    = fromPitch $ PitchL (6, Nothing, 0)
+cb'       = fromPitch $ PitchL (0, Just (-1), 1)
+db'       = fromPitch $ PitchL (1, Just (-1), 1)
+eb'       = fromPitch $ PitchL (2, Just (-1), 1)
+fb'       = fromPitch $ PitchL (3, Just (-1), 1)
+gb'       = fromPitch $ PitchL (4, Just (-1), 1)
+ab'       = fromPitch $ PitchL (5, Just (-1), 1)
+bb'       = fromPitch $ PitchL (6, Just (-1), 1)
 
-cb   = fromPitch $ PitchL (0, Just (-1), 0)
-db   = fromPitch $ PitchL (1, Just (-1), 0)
-eb   = fromPitch $ PitchL (2, Just (-1), 0)
-fb   = fromPitch $ PitchL (3, Just (-1), 0)
-gb   = fromPitch $ PitchL (4, Just (-1), 0)
-ab   = fromPitch $ PitchL (5, Just (-1), 0)
-bb   = fromPitch $ PitchL (6, Just (-1), 0)
+cs        = fromPitch $ PitchL (0, Just 1, 0)
+ds        = fromPitch $ PitchL (1, Just 1, 0)
+es        = fromPitch $ PitchL (2, Just 1, 0)
+fs        = fromPitch $ PitchL (3, Just 1, 0)
+gs        = fromPitch $ PitchL (4, Just 1, 0)
+as        = fromPitch $ PitchL (5, Just 1, 0)
+bs        = fromPitch $ PitchL (6, Just 1, 0)
 
-cs_  = fromPitch $ PitchL (0, Just 1, -1)
-ds_  = fromPitch $ PitchL (1, Just 1, -1)
-es_  = fromPitch $ PitchL (2, Just 1, -1)
-fs_  = fromPitch $ PitchL (3, Just 1, -1)
-gs_  = fromPitch $ PitchL (4, Just 1, -1)
-as_  = fromPitch $ PitchL (5, Just 1, -1)
-bs_  = fromPitch $ PitchL (6, Just 1, -1)
+c         = fromPitch $ PitchL (0, Nothing, 0)
+d         = fromPitch $ PitchL (1, Nothing, 0)
+e         = fromPitch $ PitchL (2, Nothing, 0)
+f         = fromPitch $ PitchL (3, Nothing, 0)
+g         = fromPitch $ PitchL (4, Nothing, 0)
+a         = fromPitch $ PitchL (5, Nothing, 0)
+b         = fromPitch $ PitchL (6, Nothing, 0)
 
-c_   = fromPitch $ PitchL (0, Nothing, -1)
-d_   = fromPitch $ PitchL (1, Nothing, -1)
-e_   = fromPitch $ PitchL (2, Nothing, -1)
-f_   = fromPitch $ PitchL (3, Nothing, -1)
-g_   = fromPitch $ PitchL (4, Nothing, -1)
-a_   = fromPitch $ PitchL (5, Nothing, -1)
-b_   = fromPitch $ PitchL (6, Nothing, -1)
+cb        = fromPitch $ PitchL (0, Just (-1), 0)
+db        = fromPitch $ PitchL (1, Just (-1), 0)
+eb        = fromPitch $ PitchL (2, Just (-1), 0)
+fb        = fromPitch $ PitchL (3, Just (-1), 0)
+gb        = fromPitch $ PitchL (4, Just (-1), 0)
+ab        = fromPitch $ PitchL (5, Just (-1), 0)
+bb        = fromPitch $ PitchL (6, Just (-1), 0)
 
-cb_  = fromPitch $ PitchL (0, Just (-1), -1)
-db_  = fromPitch $ PitchL (1, Just (-1), -1)
-eb_  = fromPitch $ PitchL (2, Just (-1), -1)
-fb_  = fromPitch $ PitchL (3, Just (-1), -1)
-gb_  = fromPitch $ PitchL (4, Just (-1), -1)
-ab_  = fromPitch $ PitchL (5, Just (-1), -1)
-bb_  = fromPitch $ PitchL (6, Just (-1), -1)
+cs_       = fromPitch $ PitchL (0, Just 1, -1)
+ds_       = fromPitch $ PitchL (1, Just 1, -1)
+es_       = fromPitch $ PitchL (2, Just 1, -1)
+fs_       = fromPitch $ PitchL (3, Just 1, -1)
+gs_       = fromPitch $ PitchL (4, Just 1, -1)
+as_       = fromPitch $ PitchL (5, Just 1, -1)
+bs_       = fromPitch $ PitchL (6, Just 1, -1)
 
-cs__ = fromPitch $ PitchL (0, Just 1, -2)
-ds__ = fromPitch $ PitchL (1, Just 1, -2)
-es__ = fromPitch $ PitchL (2, Just 1, -2)
-fs__ = fromPitch $ PitchL (3, Just 1, -2)
-gs__ = fromPitch $ PitchL (4, Just 1, -2)
-as__ = fromPitch $ PitchL (5, Just 1, -2)
-bs__ = fromPitch $ PitchL (6, Just 1, -2)
+c_        = fromPitch $ PitchL (0, Nothing, -1)
+d_        = fromPitch $ PitchL (1, Nothing, -1)
+e_        = fromPitch $ PitchL (2, Nothing, -1)
+f_        = fromPitch $ PitchL (3, Nothing, -1)
+g_        = fromPitch $ PitchL (4, Nothing, -1)
+a_        = fromPitch $ PitchL (5, Nothing, -1)
+b_        = fromPitch $ PitchL (6, Nothing, -1)
+          
+cb_       = fromPitch $ PitchL (0, Just (-1), -1)
+db_       = fromPitch $ PitchL (1, Just (-1), -1)
+eb_       = fromPitch $ PitchL (2, Just (-1), -1)
+fb_       = fromPitch $ PitchL (3, Just (-1), -1)
+gb_       = fromPitch $ PitchL (4, Just (-1), -1)
+ab_       = fromPitch $ PitchL (5, Just (-1), -1)
+bb_       = fromPitch $ PitchL (6, Just (-1), -1)
+          
+cs__      = fromPitch $ PitchL (0, Just 1, -2)
+ds__      = fromPitch $ PitchL (1, Just 1, -2)
+es__      = fromPitch $ PitchL (2, Just 1, -2)
+fs__      = fromPitch $ PitchL (3, Just 1, -2)
+gs__      = fromPitch $ PitchL (4, Just 1, -2)
+as__      = fromPitch $ PitchL (5, Just 1, -2)
+bs__      = fromPitch $ PitchL (6, Just 1, -2)
 
-c__  = fromPitch $ PitchL (0, Nothing, -2)
-d__  = fromPitch $ PitchL (1, Nothing, -2)
-e__  = fromPitch $ PitchL (2, Nothing, -2)
-f__  = fromPitch $ PitchL (3, Nothing, -2)
-g__  = fromPitch $ PitchL (4, Nothing, -2)
-a__  = fromPitch $ PitchL (5, Nothing, -2)
-b__  = fromPitch $ PitchL (6, Nothing, -2)
+c__       = fromPitch $ PitchL (0, Nothing, -2)
+d__       = fromPitch $ PitchL (1, Nothing, -2)
+e__       = fromPitch $ PitchL (2, Nothing, -2)
+f__       = fromPitch $ PitchL (3, Nothing, -2)
+g__       = fromPitch $ PitchL (4, Nothing, -2)
+a__       = fromPitch $ PitchL (5, Nothing, -2)
+b__       = fromPitch $ PitchL (6, Nothing, -2)
+          
+cb__      = fromPitch $ PitchL (0, Just (-1), -2)
+db__      = fromPitch $ PitchL (1, Just (-1), -2)
+eb__      = fromPitch $ PitchL (2, Just (-1), -2)
+fb__      = fromPitch $ PitchL (3, Just (-1), -2)
+gb__      = fromPitch $ PitchL (4, Just (-1), -2)
+ab__      = fromPitch $ PitchL (5, Just (-1), -2)
+bb__      = fromPitch $ PitchL (6, Just (-1), -2)
 
-cb__ = fromPitch $ PitchL (0, Just (-1), -2)
-db__ = fromPitch $ PitchL (1, Just (-1), -2)
-eb__ = fromPitch $ PitchL (2, Just (-1), -2)
-fb__ = fromPitch $ PitchL (3, Just (-1), -2)
-gb__ = fromPitch $ PitchL (4, Just (-1), -2)
-ab__ = fromPitch $ PitchL (5, Just (-1), -2)
-bb__ = fromPitch $ PitchL (6, Just (-1), -2)
+cs___     = fromPitch $ PitchL (0, Just 1, -3)
+ds___     = fromPitch $ PitchL (1, Just 1, -3)
+es___     = fromPitch $ PitchL (2, Just 1, -3)
+fs___     = fromPitch $ PitchL (3, Just 1, -3)
+gs___     = fromPitch $ PitchL (4, Just 1, -3)
+as___     = fromPitch $ PitchL (5, Just 1, -3)
+bs___     = fromPitch $ PitchL (6, Just 1, -3)
+          
+c___      = fromPitch $ PitchL (0, Nothing, -3)
+d___      = fromPitch $ PitchL (1, Nothing, -3)
+e___      = fromPitch $ PitchL (2, Nothing, -3)
+f___      = fromPitch $ PitchL (3, Nothing, -3)
+g___      = fromPitch $ PitchL (4, Nothing, -3)
+a___      = fromPitch $ PitchL (5, Nothing, -3)
+b___      = fromPitch $ PitchL (6, Nothing, -3)
+          
+cb___     = fromPitch $ PitchL (0, Just (-1), -3)
+db___     = fromPitch $ PitchL (1, Just (-1), -3)
+eb___     = fromPitch $ PitchL (2, Just (-1), -3)
+fb___     = fromPitch $ PitchL (3, Just (-1), -3)
+gb___     = fromPitch $ PitchL (4, Just (-1), -3)
+ab___     = fromPitch $ PitchL (5, Just (-1), -3)
+bb___     = fromPitch $ PitchL (6, Just (-1), -3)
+          
+cs____    = fromPitch $ PitchL (0, Just 1, -4)
+ds____    = fromPitch $ PitchL (1, Just 1, -4)
+es____    = fromPitch $ PitchL (2, Just 1, -4)
+fs____    = fromPitch $ PitchL (3, Just 1, -4)
+gs____    = fromPitch $ PitchL (4, Just 1, -4)
+as____    = fromPitch $ PitchL (5, Just 1, -4)
+bs____    = fromPitch $ PitchL (6, Just 1, -4)
+          
+c____     = fromPitch $ PitchL (0, Nothing, -4)
+d____     = fromPitch $ PitchL (1, Nothing, -4)
+e____     = fromPitch $ PitchL (2, Nothing, -4)
+f____     = fromPitch $ PitchL (3, Nothing, -4)
+g____     = fromPitch $ PitchL (4, Nothing, -4)
+a____     = fromPitch $ PitchL (5, Nothing, -4)
+b____     = fromPitch $ PitchL (6, Nothing, -4)
+          
+cb____    = fromPitch $ PitchL (0, Just (-1), -4)
+db____    = fromPitch $ PitchL (1, Just (-1), -4)
+eb____    = fromPitch $ PitchL (2, Just (-1), -4)
+fb____    = fromPitch $ PitchL (3, Just (-1), -4)
+gb____    = fromPitch $ PitchL (4, Just (-1), -4)
+ab____    = fromPitch $ PitchL (5, Just (-1), -4)
+bb____    = fromPitch $ PitchL (6, Just (-1), -4)
+          
+          
 
-
-----
-b''' = octavesUp 1 b''
-a''' = octavesUp 1 a''
-g''' = octavesUp 1 g''
-f''' = octavesUp 1 f''
-e''' = octavesUp 1 e''
-d''' = octavesUp 1 d''
-c''' = octavesUp 1 c''
-
-bs''' = octavesUp 1 bs''
-as''' = octavesUp 1 as''
-gs''' = octavesUp 1 gs''
-fs''' = octavesUp 1 fs''
-es''' = octavesUp 1 es''
-ds''' = octavesUp 1 ds''
-cs''' = octavesUp 1 cs''
-
-bb''' = octavesUp 1 bb''
-ab''' = octavesUp 1 ab''
-gb''' = octavesUp 1 gb''
-fb''' = octavesUp 1 fb''
-eb''' = octavesUp 1 eb''
-db''' = octavesUp 1 db''
-cb''' = octavesUp 1 cb''
-
-b'''' = octavesUp 1 b'''
-a'''' = octavesUp 1 a'''
-g'''' = octavesUp 1 g'''
-f'''' = octavesUp 1 f'''
-e'''' = octavesUp 1 e'''
-d'''' = octavesUp 1 d'''
-c'''' = octavesUp 1 c'''
-
-bs'''' = octavesUp 1 bs'''
-as'''' = octavesUp 1 as'''
-gs'''' = octavesUp 1 gs'''
-fs'''' = octavesUp 1 fs'''
-es'''' = octavesUp 1 es'''
-ds'''' = octavesUp 1 ds'''
-cs'''' = octavesUp 1 cs'''
-
-bb'''' = octavesUp 1 bb'''
-ab'''' = octavesUp 1 ab'''
-gb'''' = octavesUp 1 gb'''
-fb'''' = octavesUp 1 fb'''
-eb'''' = octavesUp 1 eb'''
-db'''' = octavesUp 1 db'''
-cb'''' = octavesUp 1 cb'''
-
-
-
-
-b___ = octavesDown 1 b__
-a___ = octavesDown 1 a__
-g___ = octavesDown 1 g__
-f___ = octavesDown 1 f__
-e___ = octavesDown 1 e__
-d___ = octavesDown 1 d__
-c___ = octavesDown 1 c__
-
-bs___ = octavesDown 1 bs__
-as___ = octavesDown 1 as__
-gs___ = octavesDown 1 gs__
-fs___ = octavesDown 1 fs__
-es___ = octavesDown 1 es__
-ds___ = octavesDown 1 ds__
-cs___ = octavesDown 1 cs__
-
-bb___ = octavesDown 1 bb__
-ab___ = octavesDown 1 ab__
-gb___ = octavesDown 1 gb__
-fb___ = octavesDown 1 fb__
-eb___ = octavesDown 1 eb__
-db___ = octavesDown 1 db__
-cb___ = octavesDown 1 cb__
-
-
+           

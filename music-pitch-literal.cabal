@@ -5,17 +5,14 @@ author:                 Hans Hoglund
 maintainer:             Hans Hoglund
 license:                BSD3
 license-file:           COPYING
-synopsis:               Overloaded pitch literals.
+synopsis:               DEPRECATED and merged into music-pitch
 category:               Music
 tested-with:            GHC
 build-type:             Simple
 cabal-version:          >= 1.10
 
 description:
-    This package allow you to write the pitches of standard notation as expressions
-    overloaded on result type. This works exactly like numeric literals.
-
-    This library is part of the Music Suite, see <http://music-suite.github.io>.
+    DEPRECATED and merged into music-pitch
 
 source-repository head
   type:             git

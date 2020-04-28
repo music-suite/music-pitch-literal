@@ -1,4 +1,1 @@
-
-# music-pitch-literal
-
-DEPRECATED and merged into music-pitch
+This repo has been merged into: https://github.com/music-suite/music-suite
